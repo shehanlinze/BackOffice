@@ -1,0 +1,30 @@
+.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu),
+ .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3){
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius:0.5rem !important;
+    border-bottom-right-radius:0.5rem !important;
+    background-color: #0084bd !important;
+
+}
+.input-group input{
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-left-radius: 0.5rem !important;
+    border-bottom-left-radius: 0.5rem !important;
+}
+
+.icon{
+    color: #fff !important;
+}
+.btn{
+    // background-color: #0084bd !important;
+    border-color: transparent !important;
+    // color: #fff !important;
+}
+.fw-bold{
+color: #1B2C51 !important;
+}
+.fmxw-500{
+    box-shadow: 1px 1px 2px 1px  #1B2C51 !important;
+}

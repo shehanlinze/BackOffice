@@ -1,0 +1,52 @@
+<div *ngIf="classDetails" class="card shadow border-0 mt-3">
+  <div class="card-body m-4">
+    <h2 class="card-title">{{ classDetails.name }}</h2>
+    <h6 style="text-decoration: dotted">
+      {{ "classes.buildingName" | translate }} : {{ classDetails.building }}
+    </h6>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        {{ "classes.type" | translate }} : {{ classDetails.type }}
+      </li>
+      <li class="list-group-item">
+        {{ "classes.department" | translate }} : {{ classDetails.department }}
+      </li>
+      <li class="list-group-item">
+        {{ "classes.numberOfStudents" | translate }} :
+        {{ classDetails.capacityOfStudent }}
+      </li>
+      <li class="list-group-item">
+        {{ "classes.note1" | translate }} :
+        <span *ngIf="classDetails.note != ''">{{ classDetails.note }}</span>
+        <span *ngIf="classDetails.note == ''">{{
+          "classes.noteEmpty" | translate
+        }}</span>
+      </li>
+      <li class="list-group-item">
+        {{ "classes.devices" | translate }} :
+        <span *ngIf="lenclassDevices != 0">
+          <ul *ngFor="let dev of classDevices">
+            <li>{{ dev.reference }}</li>
+          </ul>
+        </span>
+        <span *ngIf="lenclassDevices == 0">
+          {{ "classes.deviceEmpty" | translate }}
+        </span>
+      </li>
+    </ul>
+    <a
+      (click)="delClass(classDetails._id)"
+      style="margin-top: 10px"
+      class="btn btn-primary"
+    >
+      {{ "classes.deleteClass" | translate }}
+    </a>
+    <a
+      (click)="updateClasse()"
+      style="margin-top: 10px; margin-right: 10px"
+      class="btn btn-warning"
+    >
+      {{ "classes.updateClass" | translate }}
+    </a>
+  </div>
+</div>

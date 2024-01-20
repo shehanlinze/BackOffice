@@ -1,0 +1,149 @@
+<div class="py-4">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="btn-close btn-danger"
+          aria-label="Close"
+          (click)="closeModal()"
+        ></button>
+        <h3 style="margin-left: 300px">
+          {{ "classes.updateClasse" | translate }}
+        </h3>
+      </div>
+      <div  class="modal-body">
+        <form [formGroup]="upClasseForm" (ngSubmit)="updateClasse()">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <input 
+                  type="text"
+                  formControlName="classeName"
+                  class="form-control"
+                  placeholder="{{ 'classes.enterClassName' | translate }}"
+                  [ngClass]="{
+                    'is-invalid': submitted && f['classeName'].errors
+                  }"
+                />
+                <div
+                  *ngIf="submitted && f['classeName'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['classeName'].errors['required']">
+                    {{ "classes.ClassNameRequired" | translate }}
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <input
+                  placeholder="{{ 'classes.enterBuildingName' | translate }}"
+                  type="text"
+                  formControlName="buildingName"
+                  class="form-control"
+                  [ngClass]="{
+                    'is-invalid': submitted && f['buildingName'].errors
+                  }"
+                />
+                <div
+                  *ngIf="submitted && f['buildingName'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['buildingName'].errors['required']">
+                    {{ "classes.buildingNameRequired" | translate }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <input
+                  type="number"
+                  formControlName="nbrStudent"
+                  class="form-control"
+                  placeholder="{{ 'classes.nbrStudents' | translate }}"
+                  [ngClass]="{
+                    'is-invalid': submitted && f['nbrStudent'].errors
+                  }"
+                />
+                <div
+                  *ngIf="submitted && f['nbrStudent'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['nbrStudent'].errors['required']">
+                    {{ "classes.nbrStudentsRequired" | translate }}
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <select
+                  class="form-select"
+                  [formControlName]="'type'"
+                  id="type"
+                >
+                  <option  selected disabled>
+                    {{ "classes.type" | translate }}
+                  </option>
+                  <option selected value="Polycom">Polycom</option>
+                  <option value="ePodium">ePodium</option>
+                </select>
+                <div
+                  *ngIf="submitted && f['type'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['type'].errors['required']">
+                    {{ "classes.typeRequired" | translate }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <input
+                  type="text"
+                  formControlName="department"
+                  class="form-control"
+                  placeholder="{{ 'classes.department' | translate }}"
+                  [ngClass]="{
+                    'is-invalid': submitted && f['department'].errors
+                  }"
+                />
+                <div
+                  *ngIf="submitted && f['department'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['department'].errors['required']">
+                    {{ "classes.nbrStudentsRequired" | translate }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <textarea
+                [formControlName]="'note'"
+                name="textarea"
+                placeholder="{{ 'classes.note' | translate }}"
+                rows="10"
+                cols="50"
+                style="color: gray"
+              ></textarea>
+            </div>
+            <div style="margin-top: 10px" class="form-group">
+              <button type="submit" class="btn btn-primary">
+                {{ "UserInfo.save" | translate }}
+              </button>
+              <button
+                style="margin-right: 10px"
+                type="button"
+                class="btn btn-warning float-right"
+                (click)="onReset()"
+              >
+                {{ "UserInfo.reset" | translate }}
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

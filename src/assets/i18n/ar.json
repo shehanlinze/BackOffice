@@ -1,0 +1,94 @@
+{
+  "UserInfo": {
+    "FirstName": "الاسم",
+    "LastName": "اسم العائلة ",
+    "EmailAddress": "البريد الالكتروني",
+    "password": " كلمة المرور",
+    "login": "سجل الدخول",
+    "reset": "إعادة تعيين",
+    "register": "سجل البيانات",
+    "save": "سجل ",
+    "alreadyHaveAnAccount": "هل لديك حساب بالفعل ؟",
+    "registerNow": " إنشاء حساب",
+    "dontHaveAnAccount": "ليس لديك حساب ؟",
+    "enterYourEmail": "أدخل بريدك الإلكتروني",
+    "enterYourPassword": "أدخل كلمة المرور",
+    "forgetPassword": "نسيت كلمة المرور؟",
+    "rememberMe": "ذكرني",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "forgotPass": "نسيت كلمة السر",
+    "logout": "خروج",
+    "activateProf": "تفعيل",
+    "refusDemandeProf": " رفض"
+  },
+  "frmControls": {
+    "emailNotMentionned": "الرجاء ادخال بريدك الالكتروني",
+    "emailMalFormed": "البريد الإلكتروني غير صالح",
+    "NameNotMentionned": "الرجاء ادخال الإسم",
+    "PasswordNotMentionned": "الرجاء ادخال كلمة السّر",
+    "PasswordMinLength": "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+    "forgotPassword": "نسيت كلمة المرور!!!",
+    "resetPassword": "نسيت كلمة المرور!!!",
+    "reset": "ضبط"
+  },
+  "sidBar": {
+    "home": "الصفحة الرئيسية",
+    "classes": "القاعات",
+    "devices": "الأجهزة",
+    "professors": " الاساتذة",
+    "new classe": "قاعة جديد"
+  },
+  "classes": {
+    "addClasse": "إضافة قاعة",
+    "classeDetails": "تفاصيل القاعة",
+    "nbrStudents": " عدد الطلبة",
+    "devices": " الأجهزة",
+    "type": "  الصنف ",
+    "note": "إضافة ملاحظات",
+    "note1": "ملاحظات",
+    "noteEmpty": "لا يوجد ملاحظات",
+    "deviceEmpty": "لا يوجد أجهزة",
+    "departmentEmpty":" أدخل القسم",
+    "department" :"القسم",
+    "enterClassName": "أدخل اسم القاعة",
+    "enterBuildingName": "أدخل اسم المبنى",
+    "SaveAll": "حفظ الكل",
+    "buildingName": "اسم المبنى",
+    "numberOfStudents": " عدد الطلبة",
+    "className": "اسم القاعة",
+    "update": "تحديث",
+    "updateClasse":"تحديث القاعة ",
+    "details": "تفاصيل",
+    "delete": "حذف",
+    "deleteClass": "حذف القاعة",
+    "disable": "تعطيل",
+    "updateClass": "تعديل ",
+    "enable": "تفعيل",
+
+    "ClassNameRequired": " الرجاء أدخل اسم القاعة",
+    "buildingNameRequired": " الرجاء أدخل اسم المبنى",
+    "typeRequired": " الرجاء أدخل صنف القاعة",
+    "nbrStudentsRequired": " الرجاء أدخل عددالطلبة"
+  },
+  "professor": {
+    "approved": "معتمد",
+    "notApproved": "غير معتمد"
+  },
+  "footer": {
+    "allRightReserved": "حقوق © 1957-2023 جميع الحقوق محفوظة . جامعة الملك سعود."
+  },
+  "devices":{
+    "EnterNameOfDevice": "أدخل اسم الجهاز",
+    "deleteDevice": "حذف الجهاز",
+    "updateDevice": "تحديث الجهاز",
+    "AddingDevice": "إضافة جهاز",
+    "EnterReferenceOfDevice": "أدخل مرجع الجهاز",
+    "EnterBrandOfDevice": "أدخل علامة الجهاز",
+    "pleaseEnterReferenceOfDevice": "الرجاء إدخال مرجع الجهاز",
+    "PleaseEnterBrandOfDevice": "الرجاء إدخال علامة الجهاز",
+    "referenceDevice": "مرجع الجهاز",
+    "brandDevice": "علامة الجهاز",
+    "pleaseChooseClassName":"الرجاء اختر اسم القاعة",
+    "classDeletedFoDevice":"لقد تم حذف القاعة التي يتبعها هذا الجهاز ، إذًا قم بتعديل الجهاز و أضفه لقاعة أخرى"
+  }
+}

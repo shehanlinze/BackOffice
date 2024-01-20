@@ -1,0 +1,22 @@
+.sidebar {
+    background-color: #0084bd !important;
+    color: #fff !important;
+  
+}
+
+.sidebar .nav-item .nav-link {
+    color: #ffffff !important;
+    cursor: pointer !important;
+}
+.sidebar .nav-item:first-child .nav-link  {
+    background-color: #fff !important; 
+    color: #1B2C51 !important;
+}
+
+ 
+.sidebar .nav-item .nav-link:hover
+  {
+    color: #1B2C51 !important;
+    background-color: #ffff !important; 
+}
+

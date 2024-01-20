@@ -1,0 +1,67 @@
+<div class="py-4">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close btn-danger" aria-label="Close" (click)="closeModal()"></button>
+                <h3 style="margin-left: 300px">
+                    {{ "devices.AddingDevice" | translate }}
+                </h3>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="createDeviceFormGroup" (ngSubmit)="createDevice()">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" formControlName="deviceReference" class="form-control"
+                                    placeholder="{{ 'devices.referenceDevice' | translate }}" [ngClass]="{
+                      'is-invalid': submitted && formControl['deviceReference'].errors
+                    }" />
+                                <div *ngIf="submitted && formControl['deviceReference'].errors"
+                                    class="invalid-feedback">
+                                    <div *ngIf="formControl['deviceReference'].errors['required']">
+                                        {{ "devices.pleaseEnterReferenceOfDevice" | translate }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input placeholder="{{ 'devices.brandDevice' | translate }}" type="text"
+                                    formControlName="deviceBrand" class="form-control" [ngClass]="{'is-invalid': submitted && formControl['deviceBrand'].errors}" />
+                                <div *ngIf="submitted && formControl['deviceBrand'].errors" class="invalid-feedback">
+                                    <div *ngIf="formControl['deviceBrand'].errors['required']">
+                                        {{ "devices.PleaseEnterBrandOfDevice" | translate }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <select formControlName="className" class="form-control" [ngClass]="{'is-invalid': submitted && formControl['className'].errors}"
+                                (change)="onClassSelect($event)">
+                                  <option value=""  selected>{{ 'devices.pleaseChooseClassName' | translate }}</option>
+                                  <option *ngFor="let classDevice of classDevices" [value]="classDevice._id">{{ classDevice.name }}</option>
+                                </select>
+                                <div *ngIf="submitted && formControl['className'].errors" class="invalid-feedback">
+                                  <div *ngIf="formControl['className'].errors['required']">
+                                    {{ "devices.pleaseChooseClassName" | translate }}
+                                  </div>
+                                </div>
+                              </div> 
+                        </div>
+                        <div class="row">
+                            <textarea [formControlName]="'note'" name="textarea"
+                                placeholder="{{ 'classes.note' | translate }}" rows="10" cols="50"
+                                style="color: gray"></textarea>
+                        </div>
+                        <div style="margin-top: 10px" class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                {{ "UserInfo.save" | translate }}
+                            </button>
+                            <button style="margin-right: 10px" type="button" class="btn btn-warning float-right"
+                                (click)="onReset($event)">
+                                {{ "UserInfo.reset" | translate }}
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

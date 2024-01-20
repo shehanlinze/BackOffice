@@ -1,0 +1,47 @@
+<div *ngIf="deviceDetails" class="card shadow border-0 mt-3">
+  <div class="card-body m-4">
+    <h2 class="card-title">
+      {{ "devices.referenceDevice" | translate }} :
+      {{ deviceDetails.reference }}
+    </h2>
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        {{ "devices.brandDevice" | translate }} : {{ deviceDetails.brand }}
+      </li>
+      <li *ngIf="nameOfClasse" class="list-group-item">
+        {{ "classes.className" | translate }} : {{ nameOfClasse }}
+      </li>
+      <li *ngIf="!nameOfClasse" class="list-group-item">
+        {{ "classes.className" | translate }} :
+        <span style="color: red">
+          {{ "devices.classDeletedFoDevice" | translate }}
+        </span>
+      </li>
+      <li class="list-group-item">
+        {{ "classes.note1" | translate }} :
+        <span *ngIf="deviceDetails.note != ''">{{ deviceDetails.note }}</span>
+        <span *ngIf="deviceDetails.note == ''">{{
+          "classes.noteEmpty" | translate
+        }}</span>
+      </li>
+    </ul>
+    <a
+      (click)="deleteDevice(deviceDetails._id)"
+      style="margin-top: 10px"
+      class="btn btn-primary"
+    >
+      {{ "devices.deleteDevice" | translate }}
+    </a>
+    <a
+      (click)="updateDevice()"
+      style="margin-top: 10px; margin-right: 10px"
+      class="btn btn-warning"
+    >
+      {{ "classes.updateClass" | translate }}
+    </a>
+  </div>
+</div>
+
+
+

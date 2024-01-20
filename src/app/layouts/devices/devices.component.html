@@ -1,0 +1,33 @@
+<div *ngIf="isLoggedIn"  >
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a (click)="addNewDevice()" class="btn btn-sm btn-gray-800 d-inline-flex align-items-center me-5">
+                {{ "devices.AddingDevice" | translate }} <i class="fa fa-add me-2"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-12 wow fadeInUp mx-auto" data-wow-delay="0.5s">
+                <div class="bg-light rounded p-5 table-responsive">
+                    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" id="tableT"
+                        class="table table-bordered table-responsive mt-5">
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="isLoggedIn">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a (click)="addNewDevice()" class="btn btn-sm btn-gray-800 d-inline-flex align-items-center me-5">
+          {{ "devices.AddingDevice" | translate }} <i class="fa fa-add me-2"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  

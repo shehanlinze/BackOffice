@@ -1,0 +1,18 @@
+
+  .tab-content table .td-min-width {
+    width: 50px !important;
+  }
+
+  .accordion-button:not(.collapsed){
+    background-color: #fff !important;
+    border-color: transparent !important;
+    color: white !important;
+  }
+  .accordion-button:not(.collapsed):hover{
+    background-color: #fff !important;
+    border-color: transparent !important;
+    color: black !important;
+  }
+ .accordion{
+  border-color: transparent !important;
+ }

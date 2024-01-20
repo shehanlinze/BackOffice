@@ -1,0 +1,100 @@
+
+<main style="margin-right: -200px;" >
+  <section  class="vh-lg-100 mt-5 mt-lg-0 bg-soft d-flex align-items-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 d-flex align-items-center justify-content-center">
+          <div
+            class="bg-white border-0 rounded border-light p-4 p-lg-5 mx-auto w-100 fmxw-500"
+          >
+            <div class="text-center text-md-center mb-4 mt-md-0">
+              <h1 class="mb-0 h3">{{ "UserInfo.login" | translate }}</h1>
+            </div>
+            <form
+              name="signInForm"
+              (ngSubmit)="f.form.valid && signIn()"
+              #f="ngForm"
+              novalidate
+            >
+              <div class="form-group">
+                <label for="email">{{
+                  "UserInfo.EmailAddress" | translate
+                }}</label>
+                <input
+                  type="email"
+                  email
+                  class="form-control"
+                  name="email"
+                  [(ngModel)]="signInForm.email"
+                  required
+                  #email="ngModel"
+                  [ngClass]="{ 'is-invalid': f.submitted && email.errors }"
+                />
+                <div *ngIf="email.errors && f.submitted" class="invalid-feedback">
+                  <div *ngIf="email.errors['required']">
+                    {{ "frmControls.emailNotMentionned" | translate }}
+                  </div>
+                  <div *ngIf="email.errors['email']">
+                    {{ "frmControls.emailMalFormed" | translate }}
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="password">{{
+                  "UserInfo.password" | translate
+                }}</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  name="password"
+                  [(ngModel)]="signInForm.password"
+                  required
+                  minlength="6"
+                  #password="ngModel"
+                  [ngClass]="{ 'is-invalid': f.submitted && password.errors }"
+                />
+                <div
+                  *ngIf="password.errors && f.submitted"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="password.errors['required']">
+                    {{ "frmControls.PasswordNotMentionned" | translate }}
+                  </div>
+                  <div *ngIf="password.errors['minlength']">
+                    {{ "frmControls.PasswordMinLength" | translate }}
+                  </div>
+                </div>
+              </div>
+              <div style="margin-top: 10px" class="form-group">
+                <button class="btn btn-primary btn-block">
+                  {{ "UserInfo.save" | translate }}
+                </button>
+                <button
+                style="margin-right: 10px"
+                type="button"
+                class="btn btn-warning float-right"
+                (click)="onReset()"
+              >
+                {{ "UserInfo.reset" | translate }}
+              </button> <span style="margin-right: 20px;" class="fw-normal">
+                <a [routerLink]="['/forgotPassword']" class="fw-bold">{{
+                  "UserInfo.forgotPass" | translate
+                }}</a>
+              </span>
+              </div>
+            </form>
+            <div class="d-flex justify-content-center align-items-center mt-4">
+              <span class="fw-normal">
+                {{ "UserInfo.dontHaveAnAccount" | translate }}
+                <a [routerLink]="['/register']" class="fw-bold">{{
+                  "UserInfo.registerNow" | translate
+                }}</a>
+              </span> 
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>

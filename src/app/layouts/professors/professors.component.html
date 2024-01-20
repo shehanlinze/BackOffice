@@ -1,0 +1,47 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link"
+      [class.active]="showProfApprovedTable"
+      (click)="toggleProfApproved()"
+      role="tab"
+      aria-controls="home"
+      aria-selected="true"
+    >
+      {{ "professor.approved" | translate }}
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link"
+      [class.active]="!showProfApprovedTable"
+      (click)="toggleProfInapproved()"
+      role="tab"
+      aria-controls="profile"
+      aria-selected="false"
+    >
+      {{ "professor.notApproved" | translate }}
+    </button>
+  </li>
+</ul>
+<div class="card shadow border-0 mt-3">
+  <div class="card-body m-4">
+    <span *ngIf="showProfApprovedTable">
+      <table id ="tableT1"
+     *ngIf="dtOptions1"  
+        datatable
+        [dtOptions]="dtOptions1"
+        class="table table-user table-hover table-sm table-responsive m-4"
+      >    
+      </table>
+    </span>
+    <span *ngIf="!showProfApprovedTable">
+      <table id ="tableT"
+         *ngIf="dtOptions"
+        datatable
+        [dtOptions]="dtOptions"
+        class="table table-user table-hover table-sm table-responsive m-4"
+      ></table
+    ></span>
+  </div>
+</div>

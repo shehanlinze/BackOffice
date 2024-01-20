@@ -1,0 +1,12 @@
+table.dataTable thead th,
+table.dataTable thead td,
+table.dataTable tfoot th,
+table.dataTable tfoot td {
+  text-align: right !important;
+}
+table .dataTable thead th.dt-head-left,
+table .dataTable thead td.dt-head-left,
+table .dataTable tfoot th.dt-head-left,
+table .dataTable tfoot td.dt-head-left {
+  text-align: right !important;
+}

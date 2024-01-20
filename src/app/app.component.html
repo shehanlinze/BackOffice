@@ -1,0 +1,6 @@
+<main class="content">
+    <app-siedbar *ngIf="isLoggedIn" ></app-siedbar>
+    <app-head *ngIf="isLoggedIn"></app-head>
+    <router-outlet></router-outlet>
+    <app-footer *ngIf="isLoggedIn" ></app-footer>
+</main>
